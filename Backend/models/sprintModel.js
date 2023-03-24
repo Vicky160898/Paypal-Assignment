@@ -3,10 +3,10 @@ const { Schema, model } = require("mongoose");
 const sprintSchema = Schema(
   {
     email: { type: String, required: true },
-    SprintName: { type: String, required: true },
-    bugName: { type: Schema.Types.ObjectId, ref: "Bug" },
-    featuresName: { type: Schema.Types.ObjectId, ref: "Features" },
-    storyName: { type: Schema.Types.ObjectId, ref: "Story" },
+    sprintName: { type: String, required: true },
+    bug: { type: Schema.Types.ObjectId, ref: "Bug" },
+    features: { type: Schema.Types.ObjectId, ref: "Features" },
+    story: { type: Schema.Types.ObjectId, ref: "Story" },
     users: [{ type: Schema.Types.ObjectId, ref: "User" }],
   },
 
